@@ -8,6 +8,26 @@ namespace Extensions
 	public static class TransformExtensions
 	{
 		/// <summary>
+		/// Makes the given game objects children of the transform.
+		/// </summary>
+		/// <param name="transform">Parent transform.</param>
+		/// <param name="children">Game objects to make children.</param>
+		public static void AddChildren (this Transform transform, GameObject[] children)
+		{
+			Array.ForEach(children, child => child.transform.parent = transform);
+		}
+
+		/// <summary>
+		/// Makes the game objects of given components children of the transform.
+		/// </summary>
+		/// <param name="transform">Parent transform.</param>
+		/// <param name="children">Components of game objects to make children.</param>
+		public static void AddChildren (this Transform transform, Component[] children)
+		{
+			Array.ForEach(children, child => child.transform.parent = transform);
+		}
+
+		/// <summary>
 		/// Sets the position of a transform's children to zero.
 		/// </summary>
 		/// <param name="transform">Parent transform.</param>
