@@ -29,10 +29,23 @@ void Awake ()
 
 The extensions here are a work in progress.
 
+### Component
+
+```csharp
+someComponent.AddComponent<MyComponent>();
+
+someComponent.GetOrAddComponent<MyComponent>();
+
+someComponent.HasComponent<MyComponent>();
+```
+
+
 ### GameObject
 
 ```csharp
 gameObject.GetOrAddComponent<MyComponent>();
+
+gameObject.HasComponent<MyComponent>();
 ```
 
 ### Rigidbody
@@ -47,14 +60,10 @@ rigidbody.ChangeDirection(Vector3.right);
 ```csharp
 // Make array of game objects children of this transform.
 transform.AddChildren(someGameObjects);
-```
 
-```csharp
 // Set children of this transform to position (0, 0, 0).
 transform.ResetChildPositions();
-```
 
-```csharp
 transform.SetChildLayers("Ignore Raycast");
 ```
 
