@@ -39,13 +39,18 @@ someComponent.GetOrAddComponent<MyComponent>();
 someComponent.HasComponent<MyComponent>();
 ```
 
-
 ### GameObject
 
 ```csharp
 gameObject.GetOrAddComponent<MyComponent>();
 
 gameObject.HasComponent<MyComponent>();
+```
+
+### NetworkPlayer
+
+```csharp
+Network.player.GetIndex();
 ```
 
 ### Rigidbody
