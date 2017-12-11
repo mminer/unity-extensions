@@ -79,3 +79,12 @@ transform.SetChildLayers("Ignore Raycast");
 var otherPositions = someTransforms.Select(t => t.position);
 transform.position.GetClosest(otherPositions);
 ```
+
+
+### Vector3Int
+
+```csharp
+// Convert `Vector3Int` struct to `Vector3`.
+var vector = new Vector3Int(1, 2, 3);
+var vector3 = vector.ToVector3();
+```
