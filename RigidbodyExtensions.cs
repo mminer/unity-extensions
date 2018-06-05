@@ -12,7 +12,7 @@ namespace Extensions
         /// </summary>
         /// <param name="rigidbody">Rigidbody.</param>
         /// <param name="direction">New direction.</param>
-        public static void ChangeDirection (this Rigidbody rigidbody, Vector3 direction)
+        public static void ChangeDirection(this Rigidbody rigidbody, Vector3 direction)
         {
             rigidbody.velocity = direction * rigidbody.velocity.magnitude;
         }

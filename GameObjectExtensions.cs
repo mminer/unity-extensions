@@ -13,7 +13,7 @@ namespace Extensions
         /// </summary>
         /// <param name="gameObject">Game object.</param>
         /// <returns>Previously or newly attached component.</returns>
-        public static T GetOrAddComponent<T> (this GameObject gameObject) where T : Component
+        public static T GetOrAddComponent<T>(this GameObject gameObject) where T : Component
         {
             return gameObject.GetComponent<T>() ?? gameObject.AddComponent<T>();
         }
@@ -23,7 +23,7 @@ namespace Extensions
         /// </summary>
         /// <param name="gameObject">Game object.</param>
         /// <returns>True when component is attached.</returns>
-        public static bool HasComponent<T> (this GameObject gameObject) where T : Component
+        public static bool HasComponent<T>(this GameObject gameObject) where T : Component
         {
             return gameObject.GetComponent<T>() != null;
         }

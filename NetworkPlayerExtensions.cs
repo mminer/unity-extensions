@@ -12,7 +12,7 @@ namespace Extensions
         /// </summary>
         /// <param name="networkPlayer">Network player.</param>
         /// <returns>Network player index.</returns>
-        public static int GetIndex (this NetworkPlayer networkPlayer)
+        public static int GetIndex(this NetworkPlayer networkPlayer)
         {
             return int.Parse(networkPlayer.ToString());
         }

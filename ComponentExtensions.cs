@@ -12,7 +12,7 @@ namespace Extensions
         /// </summary>
         /// <param name="component">Component.</param>
         /// <returns>Newly attached component.</returns>
-        public static T AddComponent<T> (this Component component) where T : Component
+        public static T AddComponent<T>(this Component component) where T : Component
         {
             return component.gameObject.AddComponent<T>();
         }
@@ -23,7 +23,7 @@ namespace Extensions
         /// </summary>
         /// <param name="component">Component.</param>
         /// <returns>Previously or newly attached component.</returns>
-        public static T GetOrAddComponent<T> (this Component component) where T : Component
+        public static T GetOrAddComponent<T>(this Component component) where T : Component
         {
             return component.GetComponent<T>() ?? component.AddComponent<T>();
         }
@@ -33,7 +33,7 @@ namespace Extensions
         /// </summary>
         /// <param name="component">Component.</param>
         /// <returns>True when component is attached.</returns>
-        public static bool HasComponent<T> (this Component component) where T : Component
+        public static bool HasComponent<T>(this Component component) where T : Component
         {
             return component.GetComponent<T>() != null;
         }

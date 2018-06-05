@@ -13,7 +13,7 @@ namespace Extensions
         /// </summary>
         /// <param name="vector">Vector.</param>
         /// <returns>Vector3 struct.</returns>
-        public static Vector3 ToVector3 (this Vector3Int vector)
+        public static Vector3 ToVector3(this Vector3Int vector)
         {
 			return new Vector3(
 				Convert.ToSingle(vector.x),
