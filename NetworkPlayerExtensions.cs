@@ -1,3 +1,5 @@
+#if !UNITY_WEBGL
+
 using UnityEngine;
 
 namespace Extensions
@@ -18,3 +20,5 @@ namespace Extensions
         }
     }
 }
+
+#endif
