@@ -70,5 +70,32 @@ namespace Extensions
                 }
             }
         }
+
+        /// <summary>
+        /// Sets the x component of the transform's position.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        public static void SetX( this Transform transform, float x )
+        {
+            transform.position = new Vector3( x, transform.position.y, transform.position.z );
+        }
+
+        /// <summary>
+        /// Sets the y component of the transform's position.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        public static void SetY( this Transform transform, float y )
+        {
+            transform.position = new Vector3( transform.position.x, y, transform.position.z );
+        }
+
+        /// <summary>
+        /// Sets the z component of the transform's position.
+        /// </summary>
+        /// <param name="z">Value of z.</param>
+        public static void SetZ( this Transform transform, float z )
+        {
+            transform.position = new Vector3( transform.position.x, transform.position.y, z );
+        }
     }
 }
