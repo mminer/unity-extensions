@@ -5,14 +5,21 @@ for Unity objects (`GameObject`, `Vector3`, etc.). These add useful
 functionality that I often end up reimplementing in every game I make.
 
 
-## Usage
+## Installing
 
-Add the scripts to your Unity project wherever you see fit. The classes are
-in the `Extensions` namespace, so you must first import them with the `using`
-keyword.
+Add the package to your project via
+[UPM](https://docs.unity3d.com/Manual/upm-ui.html) using the Git URL
+https://github.com/mminer/unity-extensions.git. You can also clone the
+repository and point UPM to your local copy.
+
+
+## Using
+
+The classes are in the `UnityExtensions` namespace, so you must first import
+them.
 
 ```csharp
-using Extensions;
+using UnityExtensions;
 ```
 
 Now call the extensions on the appropriate object type.
@@ -26,8 +33,6 @@ void Awake ()
 
 
 ## Included Extensions
-
-The extensions here are a work in progress.
 
 ### Component
 
@@ -45,12 +50,6 @@ someComponent.HasComponent<MyComponent>();
 gameObject.GetOrAddComponent<MyComponent>();
 
 gameObject.HasComponent<MyComponent>();
-```
-
-### NetworkPlayer
-
-```csharp
-Network.player.GetIndex();
 ```
 
 ### Rigidbody
