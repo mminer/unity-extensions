@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Extensions
+namespace UnityExtensions
 {
     /// <summary>
     /// Extension methods for UnityEngine.Vector3.
