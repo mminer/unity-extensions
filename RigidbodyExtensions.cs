@@ -14,7 +14,11 @@ namespace UnityExtensions
         /// <param name="direction">New direction.</param>
         public static void ChangeDirection(this Rigidbody rigidbody, Vector3 direction)
         {
+#if UNITY_6000_0_OR_NEWER
+            rigidbody.linearVelocity = direction * rigidbody.linearVelocity.magnitude;
+#else
             rigidbody.velocity = direction * rigidbody.velocity.magnitude;
+#endif
         }
     }
 }
