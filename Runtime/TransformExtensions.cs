@@ -74,28 +74,34 @@ namespace UnityExtensions
         /// <summary>
         /// Sets the x component of the transform's position.
         /// </summary>
+        /// <param name="transform">Transform.</param>
         /// <param name="x">Value of x.</param>
-        public static void SetX( this Transform transform, float x )
+        public static void SetX(this Transform transform, float x)
         {
-            transform.position = new Vector3( x, transform.position.y, transform.position.z );
+            var position = transform.position;
+            transform.position = new Vector3(x, position.y, position.z);
         }
 
         /// <summary>
         /// Sets the y component of the transform's position.
         /// </summary>
+        /// <param name="transform">Transform.</param>
         /// <param name="y">Value of y.</param>
-        public static void SetY( this Transform transform, float y )
+        public static void SetY(this Transform transform, float y)
         {
-            transform.position = new Vector3( transform.position.x, y, transform.position.z );
+            var position = transform.position;
+            transform.position = new Vector3(position.x, y, position.z);
         }
 
         /// <summary>
         /// Sets the z component of the transform's position.
         /// </summary>
+        /// <param name="transform">Transform.</param>
         /// <param name="z">Value of z.</param>
-        public static void SetZ( this Transform transform, float z )
+        public static void SetZ(this Transform transform, float z)
         {
-            transform.position = new Vector3( transform.position.x, transform.position.y, z );
+            var position = transform.position;
+            transform.position = new Vector3(position.x, position.y, z);
         }
     }
 }
