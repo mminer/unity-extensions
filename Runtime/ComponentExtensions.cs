@@ -25,7 +25,8 @@ namespace UnityExtensions
         /// <returns>Previously or newly attached component.</returns>
         public static T GetOrAddComponent<T>(this Component component) where T : Component
         {
-            return component.GetComponent<T>() ?? component.AddComponent<T>();
+            var existingComponent = component.GetComponent<T>();
+            return existingComponent != null ? existingComponent : component.AddComponent<T>();
         }
 
         /// <summary>

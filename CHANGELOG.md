@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Prevent repeated access of `Transform.position` in `Transform.Set` functions.
+- Stop bypassing `UnityEngine.Object` lifetime check in
+  `Component.GetOrAddComponent` and `GameObject.GetOrAddComponent`.
 
 ## [1.0.1] - 2024-07-10
 
