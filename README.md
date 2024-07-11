@@ -50,6 +50,8 @@ someComponent.HasComponent<MyComponent>();
 gameObject.GetOrAddComponent<MyComponent>();
 
 gameObject.HasComponent<MyComponent>();
+
+gameObject.IsInCullingMask(Camera.main.cullingMask);
 ```
 
 ### Rigidbody

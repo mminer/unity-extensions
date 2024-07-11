@@ -28,5 +28,16 @@ namespace UnityExtensions
         {
             return gameObject.GetComponent<T>() != null;
         }
+
+        /// <summary>
+        /// Checks if a game object's layer is part of a camera's culling mask.
+        /// </summary>
+        /// <param name="gameObject">Game object.</param>
+        /// <param name="cullingMask">Camera's culling mask.</param>
+        /// <returns>True when in the culling mask.</returns>
+        public static bool IsInCullingMask(this GameObject gameObject, LayerMask cullingMask)
+        {
+            return (cullingMask & (1 << gameObject.layer)) != 0;
+        }
     }
 }
