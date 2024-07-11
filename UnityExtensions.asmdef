@@ -1,7 +1,8 @@
 {
     "name": "UnityExtensions",
-    "rootNamespace": "",
+    "rootNamespace": "UnityExtensions",
     "references": [],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
