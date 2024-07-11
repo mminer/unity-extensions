@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Support params in `Transform.AddChildren`.
+
 ### Fixed
 
 - Prevent repeated access of `Transform.position` in `Transform.Set` functions.

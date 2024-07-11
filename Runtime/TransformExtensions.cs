@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace UnityExtensions
@@ -13,9 +12,12 @@ namespace UnityExtensions
         /// </summary>
         /// <param name="transform">Parent transform.</param>
         /// <param name="children">Game objects to make children.</param>
-        public static void AddChildren(this Transform transform, GameObject[] children)
+        public static void AddChildren(this Transform transform, params GameObject[] children)
         {
-            Array.ForEach(children, child => child.transform.parent = transform);
+            foreach (var child in children)
+            {
+                child.transform.parent = transform;
+            }
         }
 
         /// <summary>
@@ -23,9 +25,12 @@ namespace UnityExtensions
         /// </summary>
         /// <param name="transform">Parent transform.</param>
         /// <param name="children">Components of game objects to make children.</param>
-        public static void AddChildren(this Transform transform, Component[] children)
+        public static void AddChildren(this Transform transform, params Component[] children)
         {
-            Array.ForEach(children, child => child.transform.parent = transform);
+            foreach (var child in children)
+            {
+                child.transform.parent = transform;
+            }
         }
 
         /// <summary>

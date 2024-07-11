@@ -62,8 +62,8 @@ rigidbody.ChangeDirection(Vector3.right);
 ### Transform
 
 ```csharp
-// Make array of game objects children of this transform.
-transform.AddChildren(someGameObjects);
+// Make game objects children of this transform.
+transform.AddChildren(gameObject1, gameObject2);
 
 // Set children of this transform to position (0, 0, 0).
 transform.ResetChildPositions();
