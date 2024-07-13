@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- `Transform.Reset`
 - `Vector2.WithX`, `Vector2.WithY`
 - `Vector2Int.WithX`, `Vector2Int.WithY`
 - `Vector3.WithX`, `Vector3.WithY`, `Vector3.WithZ`

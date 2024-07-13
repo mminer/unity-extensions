@@ -34,6 +34,29 @@ namespace UnityExtensions
         }
 
         /// <summary>
+        /// Resets the position, rotation, and scale.
+        /// </summary>
+        /// <param name="transform">Transform.</param>
+        /// <param name="space">Coordinate space in which to operate.</param>
+        public static void Reset(this Transform transform, Space space = Space.Self)
+        {
+            switch (space)
+            {
+                case Space.Self:
+                    transform.localPosition = Vector3.zero;
+                    transform.localRotation = Quaternion.identity;
+                    break;
+
+                case Space.World:
+                    transform.position = Vector3.zero;
+                    transform.rotation = Quaternion.identity;
+                    break;
+            }
+
+            transform.localScale = Vector3.one;
+        }
+
+        /// <summary>
         /// Sets the position of a transform's children to zero.
         /// </summary>
         /// <param name="transform">Parent transform.</param>
@@ -46,7 +69,7 @@ namespace UnityExtensions
 
                 if (recursive)
                 {
-                    child.ResetChildPositions(recursive);
+                    child.ResetChildPositions(true);
                 }
             }
         }
@@ -71,7 +94,7 @@ namespace UnityExtensions
 
                 if (recursive)
                 {
-                    SetChildLayersHelper(child, layer, recursive);
+                    SetChildLayersHelper(child, layer, true);
                 }
             }
         }

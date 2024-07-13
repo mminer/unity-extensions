@@ -79,6 +79,8 @@ rigidbody.ChangeDirection(Vector3.right);
 // Make game objects children of this transform.
 transform.AddChildren(gameObject1, gameObject2);
 
+transform.Reset();
+
 // Set children of this transform to position (0, 0, 0).
 transform.ResetChildPositions();
 
