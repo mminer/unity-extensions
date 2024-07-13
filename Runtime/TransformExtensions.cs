@@ -80,7 +80,7 @@ namespace UnityExtensions
         /// Sets the x component of the transform's position.
         /// </summary>
         /// <param name="transform">Transform.</param>
-        /// <param name="x">Value of x.</param>
+        /// <param name="x">New value for x.</param>
         public static void SetX(this Transform transform, float x)
         {
             var position = transform.position;
@@ -91,7 +91,7 @@ namespace UnityExtensions
         /// Sets the y component of the transform's position.
         /// </summary>
         /// <param name="transform">Transform.</param>
-        /// <param name="y">Value of y.</param>
+        /// <param name="y">New value for y.</param>
         public static void SetY(this Transform transform, float y)
         {
             var position = transform.position;
@@ -102,7 +102,7 @@ namespace UnityExtensions
         /// Sets the z component of the transform's position.
         /// </summary>
         /// <param name="transform">Transform.</param>
-        /// <param name="z">Value of z.</param>
+        /// <param name="z">New value for z.</param>
         public static void SetZ(this Transform transform, float z)
         {
             var position = transform.position;

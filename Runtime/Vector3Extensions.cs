@@ -32,5 +32,38 @@ namespace UnityExtensions
 
             return closest;
         }
+
+        /// <summary>
+        /// Sets the x component of the vector.
+        /// </summary>
+        /// <param name="vector">Vector.</param>
+        /// <param name="x">New value for x.</param>
+        /// <returns>Updated vector.</returns>
+        public static Vector3 WithX(this Vector3 vector, float x)
+        {
+            return new Vector3(x, vector.y, vector.z);
+        }
+
+        /// <summary>
+        /// Sets the y component of the vector.
+        /// </summary>
+        /// <param name="vector">Vector.</param>
+        /// <param name="y">New value for y.</param>
+        /// <returns>Updated vector.</returns>
+        public static Vector3 WithY(this Vector3 vector, float y)
+        {
+            return new Vector3(vector.x, y, vector.z);
+        }
+
+        /// <summary>
+        /// Sets the z component of the vector.
+        /// </summary>
+        /// <param name="vector">Vector.</param>
+        /// <param name="z">New value for z.</param>
+        /// <returns>Updated vector.</returns>
+        public static Vector3 WithZ(this Vector3 vector, float z)
+        {
+            return new Vector3(vector.x, vector.y, z);
+        }
     }
 }

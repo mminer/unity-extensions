@@ -85,10 +85,45 @@ transform.ResetChildPositions();
 transform.SetChildLayers("Ignore Raycast");
 ```
 
+### Vector2
+
+```csharp
+var newVector = someVector2.WithX(0.5f);
+var newVector = someVector2.WithY(0.5f);
+```
+
+### Vector2Int
+
+```csharp
+var newVector = someVector2Int.WithX(1);
+var newVector = someVector2Int.WithY(1);
+```
+
 ### Vector3
 
 ```csharp
+var newVector = someVector3.WithX(0.5f);
+var newVector = someVector3.WithY(0.5f);
+var newVector = someVector3.WithZ(0.5f);
+
 // Find closest position.
 var otherPositions = someTransforms.Select(t => t.position);
 transform.position.GetClosest(otherPositions);
+```
+
+### Vector3Int
+
+```csharp
+var newVector = someVector3Int.WithX(1);
+var newVector = someVector3Int.WithY(1);
+var newVector = someVector3Int.WithZ(1);
+```
+
+### Vector4
+
+```csharp
+var newVector = someVector4.WithX(0.5f);
+var newVector = someVector4.WithY(0.5f);
+var newVector = someVector4.WithZ(0.5f);
+var newVector = someVector4.WithW(0.5f);
 ```

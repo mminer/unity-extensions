@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [Unreleased]
+
+### Added
+
+- `Vector2.WithX`, `Vector2.WithY`
+- `Vector2Int.WithX`, `Vector2Int.WithY`
+- `Vector3.WithX`, `Vector3.WithY`, `Vector3.WithZ`
+- `Vector3Int.WithX`, `Vector3Int.WithY`, `Vector3Int.WithZ`
+- `Vector4.WithX`, `Vector4.WithY`, `Vector4.WithZ`, `Vector4.WithW`
+
 ## [1.2.0] - 2024-07-12
 
 ### Added
