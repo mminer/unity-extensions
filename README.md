@@ -54,6 +54,18 @@ gameObject.HasComponent<MyComponent>();
 gameObject.IsInCullingMask(Camera.main.cullingMask);
 ```
 
+### LayerMask
+
+```csharp
+// Set camera culling mask to only "Ignore Raycast" and "UI".
+LayerMask cullingMask = 0;
+Camera.main.cullingMask = cullingMask.WithLayers("Ignore Raycast", "UI");
+
+// Set camera culling mask to everything except "Ignore Raycast" and "UI".
+LayerMask cullingMask = ~0;
+Camera.main.cullingMask = cullingMask.WithoutLayers("Ignore Raycast", "UI");
+```
+
 ### Rigidbody
 
 ```csharp
