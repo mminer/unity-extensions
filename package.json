@@ -1,4 +1,8 @@
 {
+  "author": {
+    "name": "Matthew Miner",
+    "email": "matthew@matthewminer.com"
+  },
   "description": "A collection of extensions for Unity objects (GameObject, Vector3, etc.).",
   "displayName": "Unity Extensions",
   "name": "com.matthewminer.unity-extensions",
