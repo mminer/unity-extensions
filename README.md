@@ -84,7 +84,11 @@ transform.Reset();
 // Set children of this transform to position (0, 0, 0).
 transform.ResetChildPositions();
 
+transform.SetLocalPosition(y: 4f);
+transform.SetPosition(z: 5f);
+
 transform.SetChildLayers("Ignore Raycast");
+
 ```
 
 ### Vector2

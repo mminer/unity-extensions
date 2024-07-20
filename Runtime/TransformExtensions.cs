@@ -100,6 +100,64 @@ namespace UnityExtensions
         }
 
         /// <summary>
+        /// Sets individual components of the transform's local position.
+        /// </summary>
+        /// <param name="transform">Transform.</param>
+        /// <param name="x">New value for x.</param>
+        /// <param name="y">New value for y.</param>
+        /// <param name="z">New value for z.</param>
+        public static void SetLocalPosition(this Transform transform, float? x = null, float? y = null, float? z = null)
+        {
+            var localPosition = transform.localPosition;
+
+            if (x.HasValue)
+            {
+                localPosition.x = x.Value;
+            }
+
+            if (y.HasValue)
+            {
+                localPosition.y = y.Value;
+            }
+
+            if (z.HasValue)
+            {
+                localPosition.z = z.Value;
+            }
+
+            transform.localPosition = localPosition;
+        }
+
+        /// <summary>
+        /// Sets individual components of the transform's position.
+        /// </summary>
+        /// <param name="transform">Transform.</param>
+        /// <param name="x">New value for x.</param>
+        /// <param name="y">New value for y.</param>
+        /// <param name="z">New value for z.</param>
+        public static void SetPosition(this Transform transform, float? x = null, float? y = null, float? z = null)
+        {
+            var position = transform.position;
+
+            if (x.HasValue)
+            {
+                position.x = x.Value;
+            }
+
+            if (y.HasValue)
+            {
+                position.y = y.Value;
+            }
+
+            if (z.HasValue)
+            {
+                position.z = z.Value;
+            }
+
+            transform.position = position;
+        }
+
+        /// <summary>
         /// Sets the x component of the transform's position.
         /// </summary>
         /// <param name="transform">Transform.</param>
