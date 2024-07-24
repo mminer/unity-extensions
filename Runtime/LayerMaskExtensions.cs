@@ -24,12 +24,17 @@ namespace UnityExtensions
         /// Adds layers to the layer mask.
         /// </summary>
         /// <param name="layerMask">Layer mask to add to.</param>
-        /// <param name="layers">Names of layers to add.</param>
+        /// <param name="layerNames">Names of layers to add.</param>
         /// <returns>Updated layer mask.</returns>
         public static LayerMask WithLayers(this LayerMask layerMask, params string[] layerNames)
         {
-            var layers = GetLayersFromLayerNames(layerNames);
-            return layerMask.WithLayers(layers);
+            foreach (var name in layerNames)
+            {
+                var layer = LayerMask.NameToLayer(name);
+                layerMask |= 1 << layer;
+            }
+
+            return layerMask;
         }
 
         /// <summary>
@@ -52,24 +57,17 @@ namespace UnityExtensions
         /// Removes layers from the layer mask.
         /// </summary>
         /// <param name="layerMask">Layer mask to remove from.</param>
-        /// <param name="layers">Names of layers to remove.</param>
+        /// <param name="layerNames">Names of layers to remove.</param>
         /// <returns>Updated layer mask.</returns>
         public static LayerMask WithoutLayers(this LayerMask layerMask, params string[] layerNames)
         {
-            var layers = GetLayersFromLayerNames(layerNames);
-            return layerMask.WithoutLayers(layers);
-        }
-
-        static int[] GetLayersFromLayerNames(string[] layerNames)
-        {
-            var layers = new int[layerNames.Length];
-
-            for (var i = 0; i < layerNames.Length; i++)
+            foreach (var name in layerNames)
             {
-                layers[i] = LayerMask.NameToLayer(layerNames[i]);
+                var layer = LayerMask.NameToLayer(name);
+                layerMask &= ~(1 << layer);
             }
 
-            return layers;
+            return layerMask;
         }
     }
 }

@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - `Transform.SetPosition` and `Transform.SetLocalPosition`
 
+### Fixed
+
+- Remove array allocation in `LayerMask` extensions
+
 ## [1.3.0] - 2024-07-14
 
 ### Added
