@@ -15,8 +15,12 @@ namespace UnityExtensions
         /// <returns>Previously or newly attached component.</returns>
         public static T GetOrAddComponent<T>(this GameObject gameObject) where T : Component
         {
-            var existingComponent = gameObject.GetComponent<T>();
-            return existingComponent != null ? existingComponent : gameObject.AddComponent<T>();
+            if (!gameObject.TryGetComponent<T>(out var attachedComponent))
+            {
+                attachedComponent = gameObject.AddComponent<T>();
+            }
+
+            return attachedComponent;
         }
 
         /// <summary>
@@ -26,7 +30,7 @@ namespace UnityExtensions
         /// <returns>True when component is attached.</returns>
         public static bool HasComponent<T>(this GameObject gameObject) where T : Component
         {
-            return gameObject.GetComponent<T>() != null;
+            return gameObject.TryGetComponent<T>(out _);
         }
 
         /// <summary>

@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Remove array allocation in `LayerMask` extensions
+- Replace `GetComponent` with `TryGetComponent` in `GameObject` and `Component`
+  extensions
 
 ## [1.3.0] - 2024-07-14
 
