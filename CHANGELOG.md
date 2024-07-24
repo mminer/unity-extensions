@@ -40,30 +40,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- `GameObject.IsInCullingMask`.
+- `GameObject.IsInCullingMask`
 
 ### Changed
 
-- Support params in `Transform.AddChildren`.
+- Support params in `Transform.AddChildren`
 
 ### Fixed
 
-- Prevent repeated access of `Transform.position` in `Transform.Set` functions.
+- Prevent repeated access of `Transform.position` in `Transform.Set` functions
 - Stop bypassing `UnityEngine.Object` lifetime check in
-  `Component.GetOrAddComponent` and `GameObject.GetOrAddComponent`.
+    `Component.GetOrAddComponent` and `GameObject.GetOrAddComponent`
 
 ### Removed
 
-- Remove `Vector3Int.ToVector3` in favour of Unity's implicit conversion.
+- Remove `Vector3Int.ToVector3` in favour of Unity's implicit conversion
 
 ## [1.0.1] - 2024-07-10
 
 ### Fixed
 
-- Make `Rigidbody.ChangeDirection` compatible with Unity 6.
+- Make `Rigidbody.ChangeDirection` compatible with Unity 6
 
 ## [1.0.0] - 2022-08-08
 
 ### Added
 
-- Initial collection of Unity extensions.
+- Initial collection of Unity extensions
