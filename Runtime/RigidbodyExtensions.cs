@@ -1,3 +1,5 @@
+#if USE_PHYSICS
+
 using UnityEngine;
 
 namespace UnityExtensions
@@ -22,3 +24,5 @@ namespace UnityExtensions
         }
     }
 }
+
+#endif
