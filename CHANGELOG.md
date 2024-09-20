@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `Color.WithR`, `Color.WithG`, `Color.WithB`, `Color.WithA`
+
 ### Fixed
 
 - Prevent compiler error if physics module missing
