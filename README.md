@@ -42,6 +42,8 @@ someComponent.AddComponent<MyComponent>();
 someComponent.GetOrAddComponent<MyComponent>();
 
 someComponent.HasComponent<MyComponent>();
+
+someComponent.TryGetComponentInChildren<MyComponent>(out var component);
 ```
 
 ### GameObject
@@ -52,6 +54,8 @@ gameObject.GetOrAddComponent<MyComponent>();
 gameObject.HasComponent<MyComponent>();
 
 gameObject.IsInCullingMask(Camera.main.cullingMask);
+
+gameObject.TryGetComponentInChildren<MyComponent>(out var component);
 ```
 
 ### LayerMask
