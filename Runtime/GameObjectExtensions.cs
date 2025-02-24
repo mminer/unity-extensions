@@ -43,5 +43,14 @@ namespace UnityExtensions
         {
             return (cullingMask & (1 << gameObject.layer)) != 0;
         }
+
+        /// <summary>
+        /// Equivalent to GameObject.TryGetComponent that also looks in children.
+        /// </summary>
+        public static bool TryGetComponentInChildren<T>(this GameObject gameObject, out T result)
+        {
+            result = gameObject.GetComponentInChildren<T>();
+            return result is not null;
+        }
     }
 }

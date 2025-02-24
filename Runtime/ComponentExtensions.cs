@@ -42,5 +42,13 @@ namespace UnityExtensions
         {
             return component.TryGetComponent<T>(out _);
         }
+
+        /// <summary>
+        /// Equivalent to Component.TryGetComponent that also looks in children.
+        /// </summary>
+        public static bool TryGetComponentInChildren<T>(this Component component, out T result)
+        {
+            return component.gameObject.TryGetComponentInChildren(out result);
+        }
     }
 }
