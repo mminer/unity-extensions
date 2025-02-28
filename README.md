@@ -55,6 +55,8 @@ gameObject.HasComponent<MyComponent>();
 
 gameObject.IsInCullingMask(Camera.main.cullingMask);
 
+gameObject.SetLayerInChildren(LayerMask.NameToLayer("Ignore Raycast"));
+
 gameObject.TryGetComponentInChildren<MyComponent>(out var component);
 ```
 

@@ -45,6 +45,19 @@ namespace UnityExtensions
         }
 
         /// <summary>
+        /// Sets the layer of a game object and all its children.
+        /// </summary>
+        /// <param name="gameObject">Game object.</param>
+        /// <param name="layer">Layer to apply.</param>
+        public static void SetLayerInChildren(this GameObject gameObject, int layer)
+        {
+            foreach (var transform in gameObject.GetComponentsInChildren<Transform>(true))
+            {
+                transform.gameObject.layer = layer;
+            }
+        }
+
+        /// <summary>
         /// Equivalent to GameObject.TryGetComponent that also looks in children.
         /// </summary>
         public static bool TryGetComponentInChildren<T>(this GameObject gameObject, out T result)
