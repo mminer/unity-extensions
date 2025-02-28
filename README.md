@@ -39,6 +39,8 @@ void Awake ()
 ```csharp
 someComponent.AddComponent<MyComponent>();
 
+someComponent.AddComponents<MyComponent, AnotherComponent>();
+
 someComponent.GetOrAddComponent<MyComponent>();
 
 someComponent.HasComponent<MyComponent>();
@@ -49,6 +51,8 @@ someComponent.TryGetComponentInChildren<MyComponent>(out var component);
 ### GameObject
 
 ```csharp
+gameObject.AddComponents<MyComponent, AnotherComponent>();
+
 gameObject.GetOrAddComponent<MyComponent>();
 
 gameObject.HasComponent<MyComponent>();

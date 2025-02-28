@@ -8,6 +8,96 @@ namespace UnityExtensions
     public static class GameObjectExtensions
     {
         /// <summary>
+        /// Attaches multiple components to a game object.
+        /// </summary>
+        /// <param name="gameObject">Game object.</param>
+        public static (T1, T2) AddComponents<T1, T2>(this GameObject gameObject)
+            where T1 : Component
+            where T2 : Component
+        {
+            return (
+                gameObject.AddComponent<T1>(),
+                gameObject.AddComponent<T2>()
+            );
+        }
+
+        /// <summary>
+        /// Attaches multiple components to a game object.
+        /// </summary>
+        /// <param name="gameObject">Game object.</param>
+        public static (T1, T2, T3) AddComponents<T1, T2, T3>(this GameObject gameObject)
+            where T1 : Component
+            where T2 : Component
+            where T3 : Component
+        {
+            return (
+                gameObject.AddComponent<T1>(),
+                gameObject.AddComponent<T2>(),
+                gameObject.AddComponent<T3>()
+            );
+        }
+
+        /// <summary>
+        /// Attaches multiple components to a game object.
+        /// </summary>
+        /// <param name="gameObject">Game object.</param>
+        public static (T1, T2, T3, T4) AddComponents<T1, T2, T3, T4>(this GameObject gameObject)
+            where T1 : Component
+            where T2 : Component
+            where T3 : Component
+            where T4 : Component
+        {
+            return (
+                gameObject.AddComponent<T1>(),
+                gameObject.AddComponent<T2>(),
+                gameObject.AddComponent<T3>(),
+                gameObject.AddComponent<T4>()
+            );
+        }
+
+        /// <summary>
+        /// Attaches multiple components to a game object.
+        /// </summary>
+        /// <param name="gameObject">Game object.</param>
+        public static (T1, T2, T3, T4, T5) AddComponents<T1, T2, T3, T4, T5>(this GameObject gameObject)
+            where T1 : Component
+            where T2 : Component
+            where T3 : Component
+            where T4 : Component
+            where T5 : Component
+        {
+            return (
+                gameObject.AddComponent<T1>(),
+                gameObject.AddComponent<T2>(),
+                gameObject.AddComponent<T3>(),
+                gameObject.AddComponent<T4>(),
+                gameObject.AddComponent<T5>()
+            );
+        }
+
+        /// <summary>
+        /// Attaches multiple components to a game object.
+        /// </summary>
+        /// <param name="gameObject">Game object.</param>
+        public static (T1, T2, T3, T4, T5, T6) AddComponents<T1, T2, T3, T4, T5, T6>(this GameObject gameObject)
+            where T1 : Component
+            where T2 : Component
+            where T3 : Component
+            where T4 : Component
+            where T5 : Component
+            where T6 : Component
+        {
+            return (
+                gameObject.AddComponent<T1>(),
+                gameObject.AddComponent<T2>(),
+                gameObject.AddComponent<T3>(),
+                gameObject.AddComponent<T4>(),
+                gameObject.AddComponent<T5>(),
+                gameObject.AddComponent<T6>()
+            );
+        }
+
+        /// <summary>
         /// Gets a component attached to the given game object.
         /// If one isn't found, a new one is attached and returned.
         /// </summary>
