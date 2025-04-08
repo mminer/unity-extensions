@@ -38,13 +38,9 @@ void Awake ()
 
 ```csharp
 someComponent.AddComponent<MyComponent>();
-
 someComponent.AddComponents<MyComponent, AnotherComponent>();
-
 someComponent.GetOrAddComponent<MyComponent>();
-
 someComponent.HasComponent<MyComponent>();
-
 someComponent.TryGetComponentInChildren<MyComponent>(out var component);
 ```
 
@@ -52,15 +48,10 @@ someComponent.TryGetComponentInChildren<MyComponent>(out var component);
 
 ```csharp
 gameObject.AddComponents<MyComponent, AnotherComponent>();
-
 gameObject.GetOrAddComponent<MyComponent>();
-
 gameObject.HasComponent<MyComponent>();
-
 gameObject.IsInCullingMask(Camera.main.cullingMask);
-
 gameObject.SetLayerInChildren(LayerMask.NameToLayer("Ignore Raycast"));
-
 gameObject.TryGetComponentInChildren<MyComponent>(out var component);
 ```
 
@@ -94,17 +85,11 @@ rigidbody.ChangeDirection(Vector3.right);
 ### Transform
 
 ```csharp
-// Make game objects children of this transform.
 transform.AddChildren(gameObject1, gameObject2);
-
 transform.Reset();
-
-// Set children of this transform to position (0, 0, 0).
 transform.ResetChildPositions();
-
 transform.SetLocalPosition(y: 4f);
 transform.SetPosition(z: 5f);
-
 transform.SetChildLayers("Ignore Raycast");
 
 ```
