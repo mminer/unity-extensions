@@ -76,6 +76,14 @@ LayerMask cullingMask = ~0;
 Camera.main.cullingMask = cullingMask.WithoutLayers("Ignore Raycast", "UI");
 ```
 
+### Quaternion
+
+```csharp
+var newRotation = rotation.WithEulerX(90f);
+var newRotation = rotation.WithEulerY(90f);
+var newRotation = rotation.WithEulerZ(90f);
+```
+
 ### Rigidbody
 
 ```csharp
