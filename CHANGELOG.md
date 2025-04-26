@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - `Component.GetComponentsInChildrenIgnoringSelf`
+- `Vector3` to `Vector2` swizzles (e.g. `Vector3.XZ`)
 
 ## [1.9.0] - 2025-04-07
 

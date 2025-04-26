@@ -65,5 +65,15 @@ namespace UnityExtensions
         {
             return new Vector3(vector.x, vector.y, z);
         }
+
+        public static Vector2 XX(this Vector3 vector) => new(vector.x, vector.x);
+        public static Vector2 XY(this Vector3 vector) => new(vector.x, vector.y);
+        public static Vector2 XZ(this Vector3 vector) => new(vector.x, vector.z);
+        public static Vector2 YX(this Vector3 vector) => new(vector.y, vector.x);
+        public static Vector2 YY(this Vector3 vector) => new(vector.y, vector.y);
+        public static Vector2 YZ(this Vector3 vector) => new(vector.y, vector.z);
+        public static Vector2 ZX(this Vector3 vector) => new(vector.z, vector.x);
+        public static Vector2 ZY(this Vector3 vector) => new(vector.z, vector.y);
+        public static Vector2 ZZ(this Vector3 vector) => new(vector.z, vector.z);
     }
 }

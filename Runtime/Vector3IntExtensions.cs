@@ -39,5 +39,15 @@ namespace UnityExtensions
         {
             return new Vector3Int(vector.x, vector.y, z);
         }
+
+        public static Vector2Int XX(this Vector3Int vector) => new(vector.x, vector.x);
+        public static Vector2Int XY(this Vector3Int vector) => new(vector.x, vector.y);
+        public static Vector2Int XZ(this Vector3Int vector) => new(vector.x, vector.z);
+        public static Vector2Int YX(this Vector3Int vector) => new(vector.y, vector.x);
+        public static Vector2Int YY(this Vector3Int vector) => new(vector.y, vector.y);
+        public static Vector2Int YZ(this Vector3Int vector) => new(vector.y, vector.z);
+        public static Vector2Int ZX(this Vector3Int vector) => new(vector.z, vector.x);
+        public static Vector2Int ZY(this Vector3Int vector) => new(vector.z, vector.y);
+        public static Vector2Int ZZ(this Vector3Int vector) => new(vector.z, vector.z);
     }
 }
