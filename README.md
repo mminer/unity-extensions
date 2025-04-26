@@ -40,6 +40,7 @@ void Awake ()
 someComponent.AddComponent<MyComponent>();
 someComponent.AddComponents<MyComponent, AnotherComponent>();
 someComponent.GetOrAddComponent<MyComponent>();
+someComponent.GetComponentsInChildrenIgnoringSef<MyComponent>();
 someComponent.HasComponent<MyComponent>();
 someComponent.TryGetComponentInChildren<MyComponent>(out var component);
 ```

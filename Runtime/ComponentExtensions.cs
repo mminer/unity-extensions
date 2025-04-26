@@ -82,6 +82,26 @@ namespace UnityExtensions
             return component.gameObject.AddComponents<T1, T2, T3, T4, T5, T6>();
         }
 
+        public static T[] GetComponentsInChildrenIgnoringSelf<T>(this T component, bool includeInactive = false) where T : Component
+        {
+            var components = component.GetComponentsInChildren<T>(includeInactive);
+            var result = new T[components.Length - 1];
+            var index = 0;
+
+            foreach (var item in components)
+            {
+                if (item == component)
+                {
+                    continue;
+                }
+
+                result[index] = item;
+                index++;
+            }
+
+            return result;
+        }
+
         /// <summary>
         /// Gets a component attached to the given component's game object.
         /// If one isn't found, a new one is attached and returned.
