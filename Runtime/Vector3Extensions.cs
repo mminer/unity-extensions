@@ -41,8 +41,8 @@ namespace UnityExtensions
         /// <summary>
         /// Finds the position closest to the given one.
         /// </summary>
-        /// <param name="position">World position.</param>
-        /// <param name="otherPositions">Other world positions.</param>
+        /// <param name="position">Position.</param>
+        /// <param name="otherPositions">Other positions.</param>
         /// <returns>Closest position.</returns>
         public static Vector3 GetClosest(this Vector3 position, IEnumerable<Vector3> otherPositions)
         {

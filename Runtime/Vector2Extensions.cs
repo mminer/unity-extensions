@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace UnityExtensions
@@ -35,6 +36,31 @@ namespace UnityExtensions
         public static Vector2 Floor(this Vector2 vector)
         {
             return new Vector2(Mathf.Floor(vector.x), Mathf.Floor(vector.y));
+        }
+
+        /// <summary>
+        /// Finds the position closest to the given one.
+        /// </summary>
+        /// <param name="position">Position.</param>
+        /// <param name="otherPositions">Other positions.</param>
+        /// <returns>Closest position.</returns>
+        public static Vector2 GetClosest(this Vector2 position, IEnumerable<Vector2> otherPositions)
+        {
+            var closest = Vector2.zero;
+            var shortestDistance = Mathf.Infinity;
+
+            foreach (var otherPosition in otherPositions)
+            {
+                var distance = (position - otherPosition).sqrMagnitude;
+
+                if (distance < shortestDistance)
+                {
+                    closest = otherPosition;
+                    shortestDistance = distance;
+                }
+            }
+
+            return closest;
         }
 
         /// <summary>
