@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - `Bounds.RandomPointInside`
+- `Transform.CopyFrom`
 - `Vector2.Abs`, `Vector3.Abs`, `Vector4.Abs`, `Vector2Int.Abs`,
   `Vector3Int.Abs`
 - `Vector2.Ceil`, `Vector3.Ceil`, `Vector4.Ceil`

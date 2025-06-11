@@ -34,6 +34,28 @@ namespace UnityExtensions
         }
 
         /// <summary>
+        /// Copies position, rotation, and scale from another transform.
+        /// </summary>
+        /// <param name="transform">Transform to copy to.</param>
+        /// <param name="other">Transform to copy from.</param>
+        /// <param name="space">Coordinate space in which to operate.</param>
+        public static void CopyFrom(this Transform transform, Transform other, Space space = Space.World)
+        {
+            switch (space)
+            {
+                case Space.Self:
+                    transform.SetLocalPositionAndRotation(other.localPosition, other.localRotation);
+                    break;
+
+                case Space.World:
+                    transform.SetPositionAndRotation(other.localPosition, other.localRotation);
+                    break;
+            }
+
+            transform.localScale = other.localScale;
+        }
+
+        /// <summary>
         /// Resets the position, rotation, and scale.
         /// </summary>
         /// <param name="transform">Transform.</param>
