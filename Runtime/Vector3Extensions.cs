@@ -9,6 +9,16 @@ namespace UnityExtensions
     public static class Vector3Extensions
     {
         /// <summary>
+        /// Sets each component to its absolute value.
+        /// </summary>
+        /// <param name="vector">Vector.</param>
+        /// <returns>Vector with absolute values.</returns>
+        public static Vector3 Abs(this Vector3 vector)
+        {
+            return new Vector3(Mathf.Abs(vector.x), Mathf.Abs(vector.y), Mathf.Abs(vector.z));
+        }
+
+        /// <summary>
         /// Finds the position closest to the given one.
         /// </summary>
         /// <param name="position">World position.</param>

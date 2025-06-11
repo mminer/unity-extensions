@@ -8,6 +8,16 @@ namespace UnityExtensions
     public static class Vector4Extensions
     {
         /// <summary>
+        /// Sets each component to its absolute value.
+        /// </summary>
+        /// <param name="vector">Vector.</param>
+        /// <returns>Vector with absolute values.</returns>
+        public static Vector4 Abs(this Vector4 vector)
+        {
+            return new Vector4(Mathf.Abs(vector.x), Mathf.Abs(vector.y), Mathf.Abs(vector.z), Mathf.Abs(vector.w));
+        }
+
+        /// <summary>
         /// Sets the x component of the vector.
         /// </summary>
         /// <param name="vector">Vector.</param>

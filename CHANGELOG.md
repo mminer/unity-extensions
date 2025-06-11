@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - `Bounds.RandomPointInside`
+- `Vector2.Abs`, `Vector3.Abs`, `Vector4.Abs`, `Vector2Int.Abs`,
+  `Vector3Int.Abs`
 
 ## [1.10.0] - 2025-04-25
 
