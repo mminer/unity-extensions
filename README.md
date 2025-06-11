@@ -126,6 +126,9 @@ transform.SetChildLayers("Ignore Raycast");
 
 ```csharp
 var absoluteVector = someVector2.Abs();
+var ceiledVector = someVector2.Ceil();
+var flooredVector = someVector2.Floor();
+var roundedVector = someVector2.Round();
 var newVector = someVector2.WithX(0.5f);
 var newVector = someVector2.WithY(0.5f);
 ```
@@ -142,6 +145,9 @@ var newVector = someVector2Int.WithY(1);
 
 ```csharp
 var absoluteVector = someVector3.Abs();
+var ceiledVector = someVector3.Ceil();
+var flooredVector = someVector3.Floor();
+var roundedVector = someVector3.Round();
 var newVector = someVector3.WithX(0.5f);
 var newVector = someVector3.WithY(0.5f);
 var newVector = someVector3.WithZ(0.5f);
@@ -174,6 +180,9 @@ var xz = someVector3Int.XZ();
 
 ```csharp
 var absoluteVector = someVector4.Abs();
+var ceiledVector = someVector4.Ceil();
+var flooredVector = someVector4.Floor();
+var roundedVector = someVector4.Round();
 var newVector = someVector4.WithX(0.5f);
 var newVector = someVector4.WithY(0.5f);
 var newVector = someVector4.WithZ(0.5f);

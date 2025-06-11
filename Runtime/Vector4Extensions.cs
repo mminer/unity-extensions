@@ -18,6 +18,36 @@ namespace UnityExtensions
         }
 
         /// <summary>
+        /// Sets each component to its value rounded up to the nearest integer.
+        /// </summary>
+        /// <param name="vector">Vector.</param>
+        /// <returns>Vector with ceiling values.</returns>
+        public static Vector4 Ceil(this Vector4 vector)
+        {
+            return new Vector4(Mathf.Ceil(vector.x), Mathf.Ceil(vector.y), Mathf.Ceil(vector.z), Mathf.Ceil(vector.w));
+        }
+
+        /// <summary>
+        /// Sets each component to its value rounded down to the nearest integer.
+        /// </summary>
+        /// <param name="vector">Vector.</param>
+        /// <returns>Vector with floored values.</returns>
+        public static Vector4 Floor(this Vector4 vector)
+        {
+            return new Vector4(Mathf.Floor(vector.x), Mathf.Floor(vector.y), Mathf.Floor(vector.z), Mathf.Floor(vector.w));
+        }
+
+        /// <summary>
+        /// Sets each component to its value rounded to the nearest integer.
+        /// </summary>
+        /// <param name="vector">Vector.</param>
+        /// <returns>Vector with rounded values.</returns>
+        public static Vector4 Round(this Vector4 vector)
+        {
+            return new Vector4(Mathf.Round(vector.x), Mathf.Round(vector.y), Mathf.Round(vector.z), Mathf.Round(vector.w));
+        }
+
+        /// <summary>
         /// Sets the x component of the vector.
         /// </summary>
         /// <param name="vector">Vector.</param>

@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Bounds.RandomPointInside`
 - `Vector2.Abs`, `Vector3.Abs`, `Vector4.Abs`, `Vector2Int.Abs`,
   `Vector3Int.Abs`
+- `Vector2.Ceil`, `Vector3.Ceil`, `Vector4.Ceil`
+- `Vector2.Floor`, `Vector3.Floor`, `Vector4.Floor`
+- `Vector2.Round`, `Vector3.Round`, `Vector4.Round`
 
 ## [1.10.0] - 2025-04-25
 

@@ -19,6 +19,26 @@ namespace UnityExtensions
         }
 
         /// <summary>
+        /// Sets each component to its value rounded up to the nearest integer.
+        /// </summary>
+        /// <param name="vector">Vector.</param>
+        /// <returns>Vector with ceiling values.</returns>
+        public static Vector3 Ceil(this Vector3 vector)
+        {
+            return new Vector3(Mathf.Ceil(vector.x), Mathf.Ceil(vector.y), Mathf.Ceil(vector.z));
+        }
+
+        /// <summary>
+        /// Sets each component to its value rounded down to the nearest integer.
+        /// </summary>
+        /// <param name="vector">Vector.</param>
+        /// <returns>Vector with floored values.</returns>
+        public static Vector3 Floor(this Vector3 vector)
+        {
+            return new Vector3(Mathf.Floor(vector.x), Mathf.Floor(vector.y), Mathf.Floor(vector.z));
+        }
+
+        /// <summary>
         /// Finds the position closest to the given one.
         /// </summary>
         /// <param name="position">World position.</param>
@@ -41,6 +61,16 @@ namespace UnityExtensions
             }
 
             return closest;
+        }
+
+        /// <summary>
+        /// Sets each component to its value rounded to the nearest integer.
+        /// </summary>
+        /// <param name="vector">Vector.</param>
+        /// <returns>Vector with rounded values.</returns>
+        public static Vector3 Round(this Vector3 vector)
+        {
+            return new Vector3(Mathf.Round(vector.x), Mathf.Round(vector.y), Mathf.Round(vector.z));
         }
 
         /// <summary>
