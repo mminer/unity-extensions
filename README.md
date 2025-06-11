@@ -70,7 +70,7 @@ GameObject.GetOrAddComponent<T>();
 GameObject.HasComponent<T>();
 GameObject.IsInCullingMask(LayerMask cullingMask);
 GameObject.SetLayerInChildren(int layer);
-GameObject.TryGetComponentInChildren<T>(out var component);
+GameObject.TryGetComponentInChildren<T>(out T component);
 
 LayerMask.WithLayers(params int[] layers);
 LayerMask.WithLayers(params string[] layerNames);
@@ -87,7 +87,7 @@ Transform.AddChildren(params GameObject[] children);
 Transform.AddChildren(params Component[] children);
 Transform.Reset(Space space = Space.Self);
 Transform.ResetChildPositions(bool recursive = false);
-Transform.SetChildLayers(string layerName, bool recursive = false)
+Transform.SetChildLayers(string layerName, bool recursive = false);
 Transform.SetLocalPosition(float? x = null, float? y = null, float? z = null);
 Transform.SetPosition(float? x = null, float? y = null, float? z = null);
 Transform.SetX(float x);
