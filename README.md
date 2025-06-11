@@ -53,7 +53,7 @@ void Awake ()
 ```
 
 
-## Included Extensions
+## Extensions
 
 ### Bounds
 
@@ -146,6 +146,11 @@ var newVector = someVector3.WithZ(0.5f);
 // Find closest position.
 var otherPositions = someTransforms.Select(t => t.position);
 transform.position.GetClosest(otherPositions);
+
+// Swizzle operations.
+var xy = someVector3.XY();
+var xz = someVector3.XZ();
+// ... and so forth for all combinations.
 ```
 
 ### Vector3Int
@@ -154,6 +159,11 @@ transform.position.GetClosest(otherPositions);
 var newVector = someVector3Int.WithX(1);
 var newVector = someVector3Int.WithY(1);
 var newVector = someVector3Int.WithZ(1);
+
+// Swizzle operations.
+var xy = someVector3Int.XY();
+var xz = someVector3Int.XZ();
+// ... and so forth for all combinations.
 ```
 
 ### Vector4
