@@ -55,6 +55,12 @@ void Awake ()
 
 ## Included Extensions
 
+### Bounds
+
+```csharp
+var randomPoint = someBounds.RandomPointInside();
+```
+
 ### Component
 
 ```csharp
