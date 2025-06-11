@@ -84,17 +84,18 @@ namespace UnityExtensions
         {
             var layer = LayerMask.NameToLayer(layerName);
             SetChildLayersHelper(transform, layer, recursive);
-        }
+            return;
 
-        static void SetChildLayersHelper(Transform transform, int layer, bool recursive)
-        {
-            foreach (Transform child in transform)
+            static void SetChildLayersHelper(Transform transform, int layer, bool recursive)
             {
-                child.gameObject.layer = layer;
-
-                if (recursive)
+                foreach (Transform child in transform)
                 {
-                    SetChildLayersHelper(child, layer, true);
+                    child.gameObject.layer = layer;
+
+                    if (recursive)
+                    {
+                        SetChildLayersHelper(child, layer, true);
+                    }
                 }
             }
         }
