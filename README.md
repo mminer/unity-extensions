@@ -97,6 +97,7 @@ Transform.SetZ(float z);
 Vector2.Abs();
 Vector2.Ceil();
 Vector2.Floor();
+Vector2.GetClosest(IEnumerable<Vector2> otherPositions);
 Vector2.Round();
 Vector2.WithX(float x);
 Vector2.WithY(float y);
