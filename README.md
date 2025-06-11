@@ -55,136 +55,86 @@ void Awake ()
 
 ## Extensions
 
-### Bounds
-
 ```csharp
-var randomPoint = someBounds.RandomPointInside();
-```
+Bounds.RandomPointInside();
 
-### Component
+Component.AddComponent<T>();
+Component.AddComponents<T1, T2>();
+Component.GetComponentsInChildrenIgnoringSelf<T>(bool includeInactive = false);
+Component.GetOrAddComponent<T>();
+Component.HasComponent<T>();
+Component.TryGetComponentInChildren<T>(out T component);
 
-```csharp
-someComponent.AddComponent<MyComponent>();
-someComponent.AddComponents<MyComponent, AnotherComponent>();
-someComponent.GetOrAddComponent<MyComponent>();
-someComponent.GetComponentsInChildrenIgnoringSef<MyComponent>();
-someComponent.HasComponent<MyComponent>();
-someComponent.TryGetComponentInChildren<MyComponent>(out var component);
-```
+GameObject.AddComponents<T1, T2>();
+GameObject.GetOrAddComponent<T>();
+GameObject.HasComponent<T>();
+GameObject.IsInCullingMask(LayerMask cullingMask);
+GameObject.SetLayerInChildren(int layer);
+GameObject.TryGetComponentInChildren<T>(out var component);
 
-### GameObject
+LayerMask.WithLayers(params int[] layers);
+LayerMask.WithLayers(params string[] layerNames);
+LayerMask.WithoutLayers(params int[] layers);
+LayerMask.WithoutLayers(params string[] layerNames);
 
-```csharp
-gameObject.AddComponents<MyComponent, AnotherComponent>();
-gameObject.GetOrAddComponent<MyComponent>();
-gameObject.HasComponent<MyComponent>();
-gameObject.IsInCullingMask(Camera.main.cullingMask);
-gameObject.SetLayerInChildren(LayerMask.NameToLayer("Ignore Raycast"));
-gameObject.TryGetComponentInChildren<MyComponent>(out var component);
-```
+Quaternion.WithEulerX(float x);
+Quaternion.WithEulerY(float y);
+Quaternion.WithEulerZ(float z);
 
-### LayerMask
+Rigidbody.ChangeDirection(Vector3 direction);
 
-```csharp
-// Set camera culling mask to only "Ignore Raycast" and "UI".
-LayerMask cullingMask = 0;
-Camera.main.cullingMask = cullingMask.WithLayers("Ignore Raycast", "UI");
+Transform.AddChildren(params GameObject[] children);
+Transform.AddChildren(params Component[] children);
+Transform.Reset(Space space = Space.Self);
+Transform.ResetChildPositions(bool recursive = false);
+Transform.SetChildLayers(string layerName, bool recursive = false)
+Transform.SetLocalPosition(float? x = null, float? y = null, float? z = null);
+Transform.SetPosition(float? x = null, float? y = null, float? z = null);
+Transform.SetX(float x);
+Transform.SetY(float y);
+Transform.SetZ(float z);
 
-// Set camera culling mask to everything except "Ignore Raycast" and "UI".
-LayerMask cullingMask = ~0;
-Camera.main.cullingMask = cullingMask.WithoutLayers("Ignore Raycast", "UI");
-```
+Vector2.Abs();
+Vector2.Ceil();
+Vector2.Floor();
+Vector2.Round();
+Vector2.WithX(float x);
+Vector2.WithY(float y);
 
-### Quaternion
+Vector2Int.Abs();
+Vector2Int.WithX(int x);
+Vector2Int.WithY(int y);
 
-```csharp
-var newRotation = rotation.WithEulerX(90f);
-var newRotation = rotation.WithEulerY(90f);
-var newRotation = rotation.WithEulerZ(90f);
-```
+Vector3.Abs();
+Vector3.Ceil();
+Vector3.Floor();
+Vector3.GetClosest(IEnumerable<Vector3> otherPositions);
+Vector3.Round();
+Vector3.WithX(float x);
+Vector3.WithY(float y);
+Vector3.WithZ(float z);
 
-### Rigidbody
-
-```csharp
-// Change direction of movement without modifying speed.
-rigidbody.ChangeDirection(Vector3.right);
-```
-
-### Transform
-
-```csharp
-transform.AddChildren(gameObject1, gameObject2);
-transform.Reset();
-transform.ResetChildPositions();
-transform.SetLocalPosition(y: 4f);
-transform.SetPosition(z: 5f);
-transform.SetChildLayers("Ignore Raycast");
-
-```
-
-### Vector2
-
-```csharp
-var absoluteVector = someVector2.Abs();
-var ceiledVector = someVector2.Ceil();
-var flooredVector = someVector2.Floor();
-var roundedVector = someVector2.Round();
-var newVector = someVector2.WithX(0.5f);
-var newVector = someVector2.WithY(0.5f);
-```
-
-### Vector2Int
-
-```csharp
-var absoluteVector = someVector2Int.Abs();
-var newVector = someVector2Int.WithX(1);
-var newVector = someVector2Int.WithY(1);
-```
-
-### Vector3
-
-```csharp
-var absoluteVector = someVector3.Abs();
-var ceiledVector = someVector3.Ceil();
-var flooredVector = someVector3.Floor();
-var roundedVector = someVector3.Round();
-var newVector = someVector3.WithX(0.5f);
-var newVector = someVector3.WithY(0.5f);
-var newVector = someVector3.WithZ(0.5f);
-
-// Find closest position.
-var otherPositions = someTransforms.Select(t => t.position);
-transform.position.GetClosest(otherPositions);
-
-// Swizzle operations.
-var xy = someVector3.XY();
-var xz = someVector3.XZ();
+// Swizzle operations:
+Vector3.XY();
+Vector3.XZ();
 // ... and so forth for all combinations.
-```
 
-### Vector3Int
+Vector3Int.Abs();
+Vector3Int.WithX(int x);
+Vector3Int.WithY(int y);
+Vector3Int.WithZ(int z);
 
-```csharp
-var absoluteVector = someVector3Int.Abs();
-var newVector = someVector3Int.WithX(1);
-var newVector = someVector3Int.WithY(1);
-var newVector = someVector3Int.WithZ(1);
-
-// Swizzle operations.
-var xy = someVector3Int.XY();
-var xz = someVector3Int.XZ();
+// Swizzle operations:
+Vector3Int.XY();
+Vector3Int.XZ();
 // ... and so forth for all combinations.
-```
 
-### Vector4
-
-```csharp
-var absoluteVector = someVector4.Abs();
-var ceiledVector = someVector4.Ceil();
-var flooredVector = someVector4.Floor();
-var roundedVector = someVector4.Round();
-var newVector = someVector4.WithX(0.5f);
-var newVector = someVector4.WithY(0.5f);
-var newVector = someVector4.WithZ(0.5f);
-var newVector = someVector4.WithW(0.5f);
+Vector4.Abs();
+Vector4.Ceil();
+Vector4.Floor();
+Vector4.Round();
+Vector4.WithX(float x);
+Vector4.WithY(float y);
+Vector4.WithZ(float z);
+Vector4.WithW(float w);
 ```
