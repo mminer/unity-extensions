@@ -1,16 +1,37 @@
 # Unity Extensions
 
-Here we have [extension methods](http://en.wikipedia.org/wiki/Extension_method)
-for Unity objects (`GameObject`, `Vector3`, etc.). These add useful
-functionality that I often end up reimplementing in every game I make.
+[Extension methods](http://en.wikipedia.org/wiki/Extension_method) for Unity
+types. If you find yourself thinking "gee, I wish `GameObject` / `Vector3` /
+`Quaternion` had this method," this might be the package for you.
 
 
 ## Installing
 
 Add the package to your project via
-[UPM](https://docs.unity3d.com/Manual/upm-ui.html) using the Git URL
-https://github.com/mminer/unity-extensions.git. You can also clone the
-repository and point UPM to your local copy.
+[UPM](https://docs.unity3d.com/Manual/upm-ui.html) using the Git URL:
+
+```
+https://github.com/mminer/unity-extensions.git
+```
+
+1. Open the Package Manager window in Unity (*Window > Package Manager*)
+2. Click the "+" button in the top-left corner
+3. Select "Install package from git URL..."
+4. Enter the above Git URL
+5. Click "Install"
+
+Alternatively, add the following line to your `Packages/manifest.json` file:
+
+```json
+{
+  "dependencies": {
+    "com.matthewminer.unity-extensions": "https://github.com/mminer/unity-extensions.git",
+    ...
+  }
+}
+```
+
+You can also clone the repository and point UPM to your local copy.
 
 
 ## Using
