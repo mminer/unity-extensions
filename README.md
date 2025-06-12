@@ -58,6 +58,11 @@ void Awake ()
 ```csharp
 Bounds.RandomPointInside();
 
+Color.WithR(float r);
+Color.WithG(float g);
+Color.WithB(float b);
+Color.WithA(float a);
+
 Component.AddComponent<T>();
 Component.AddComponents<T1, T2>();
 Component.GetComponentsInChildrenIgnoringSelf<T>(bool includeInactive = false);
