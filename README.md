@@ -88,6 +88,8 @@ Quaternion.WithEulerZ(float z);
 
 Rigidbody.ChangeDirection(Vector3 direction);
 
+Texture2D.IsSingleColor();
+
 Transform.AddChildren(params GameObject[] children);
 Transform.AddChildren(params Component[] children);
 Transform.Reset(Space space = Space.Self);
