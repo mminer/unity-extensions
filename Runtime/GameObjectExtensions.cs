@@ -97,6 +97,31 @@ namespace UnityExtensions
             );
         }
 
+
+        /// <summary>
+        /// Calculates the combined bounds of all renderers attached to the game object and its children.
+        /// </summary>
+        /// <param name="gameObject">Game object.</param>
+        /// <returns>Total bounds.</returns>
+        public static Bounds GetBounds(this GameObject gameObject)
+        {
+            var renderers = gameObject.GetComponentsInChildren<Renderer>();
+
+            if (renderers.Length == 0)
+            {
+                return new Bounds(gameObject.transform.position, Vector3.zero);
+            }
+
+            var bounds = renderers[0].bounds;
+
+            for (var i = 1; i < renderers.Length; i++)
+            {
+                bounds.Encapsulate(renderers[i].bounds);
+            }
+
+            return bounds;
+        }
+
         /// <summary>
         /// Gets a component attached to the given game object.
         /// If one isn't found, a new one is attached and returned.

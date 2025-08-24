@@ -71,6 +71,7 @@ Component.HasComponent<T>();
 Component.TryGetComponentInChildren<T>(out T component);
 
 GameObject.AddComponents<T1, T2>();
+GameObject.GetBounds();
 GameObject.GetOrAddComponent<T>();
 GameObject.HasComponent<T>();
 GameObject.IsInCullingMask(LayerMask cullingMask);
